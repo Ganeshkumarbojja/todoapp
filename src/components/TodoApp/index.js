@@ -36,13 +36,20 @@ const TodoApp = () => {
         return;
       }
       const inputArray = inputValue.split(" ");
-      const noOfTimes = parseInt(inputArray[inputArray.length - 1]);
-      const todoTitle = inputArray.slice(0, inputArray.length - 1).join(" ");
+      let noOfTimes = parseInt(inputArray[inputArray.length - 1]);
+      let todoTitle = inputArray.slice(0, inputArray.length - 1).join(" ");
+
+      if (isNaN(noOfTimes)) {
+        noOfTimes = 1;
+        todoTitle = inputValue;
+      }
       const newTodosArray = [];
+
       for (let i = 0; i < noOfTimes; i++) {
         const newTodo = { id: v4(), title: todoTitle, updatedCount: 0 };
         newTodosArray.push(newTodo);
       }
+
       setTodosList((prev) => [...prev, ...newTodosArray]);
       setInputValue("");
     }
