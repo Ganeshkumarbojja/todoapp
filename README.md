@@ -20,3 +20,9 @@ Todo App with a twist.
 ## Website Url
 
 - [https://todoapp-peach-chi.vercel.app/](https://todoapp-peach-chi.vercel.app/)
+
+## Resources
+
+- Icons: [https://react-icons.github.io/react-icons/](https://react-icons.github.io/react-icons/)
+
+- Colors: [https://www.colorpicker.com/](https://www.colorpicker.com/)
