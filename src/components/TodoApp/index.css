@@ -49,3 +49,9 @@
   max-width: 1200px;
   padding: 0px;
 }
+
+.no-todos-msg {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+}

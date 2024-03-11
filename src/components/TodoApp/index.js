@@ -78,16 +78,20 @@ const TodoApp = () => {
       <button type="button" onClick={onAddTodo} className="add-todo-btn">
         Add Todo
       </button>
-      <ul className="todos-list">
-        {todosList.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            todoDetails={todo}
-            deleteTodoItem={deleteTodoItem}
-            editTodoItem={editTodoItem}
-          />
-        ))}
-      </ul>
+      {todosList.length === 0 ? (
+        <p className="no-todos-msg">Todos list is empty</p>
+      ) : (
+        <ul className="todos-list">
+          {todosList.map((todo) => (
+            <TodoItem
+              key={todo.id}
+              todoDetails={todo}
+              deleteTodoItem={deleteTodoItem}
+              editTodoItem={editTodoItem}
+            />
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
